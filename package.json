@@ -1,0 +1,22 @@
+{
+  "name": "pbdesk-configurator",
+  "version": "0.0.0",
+  "description": "pbdesk configurator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PBDeskIO/pbdesk-configurator.git"
+  },
+  "author": "Pinal Bhatt <self@pbdesk.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PBDeskIO/pbdesk-configurator/issues"
+  },
+  "homepage": "https://github.com/PBDeskIO/pbdesk-configurator",
+  "dependencies": {
+    "lodash": "^3.7.0"
+  }
+}
