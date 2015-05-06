@@ -3,6 +3,7 @@
 	
 	var fs = require('fs');
 	var path = require('path');
+    var util = require('util');
 	var _ = require('lodash');
 
     module.exports = function(environment, configsFolder){
@@ -17,15 +18,15 @@
     }
 
     if(!fs.existsSync(configsFolder)){
-        var msg = 'configsFolder ' + configsFolder + ' not found or does not exists';
-        console.log(msg);
-        return new Error(msg);
+        return new Error(util.format('configsFolder %s not found or does not exists', configsFolder));
+    }
+
+    if(!fs.existsSync(path.join(configsFolder,  'global.js'))){
+        return new Error(util.format('global.js environment file not found'));
     }
 
     if(!fs.existsSync(path.join(configsFolder, environment + '.js'))){
-        var msg = 'environment file not found for ' + environment;
-        console.log(msg);
-        return new Error(msg);
+        return new Error(util.format('environment file not found for %s', environment));
     }
 
     var mergedEnvs = _.merge(
