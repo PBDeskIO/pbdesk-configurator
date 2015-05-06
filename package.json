@@ -1,6 +1,6 @@
 {
   "name": "pbdesk-configurator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "pbdesk configurator",
   "main": "index.js",
   "scripts": {
